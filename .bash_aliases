@@ -76,4 +76,4 @@ alias gtags="ctags -R --exclude=node_modules --exclude=.venv"
 alias dnode="node --inspect node_modules/webpack-dev-server/bin/webpack-dev-server.js"
 
 alias modifyalias='nvim ~/.bash_aliases'
-alias dotfiles='/usr/bin/git --git-dir=/home/acc/.dotfiles/ --work-tree=/home/acc'
+alias df='/usr/bin/git --git-dir=/home/acc/.dotfiles/ --work-tree=/home/acc $@'
