@@ -166,3 +166,4 @@ export GPG_TTY=$(tty)
 bindkey '^ ' autosuggest-accept
 bindkey '^n' autosuggest-accept
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
+export PATH="$HOME/.poetry/bin:/usr/local/go/bin:$PATH"

@@ -15,12 +15,10 @@ end
 local pwsh = "c:\\Program Files\\PowerShell\\7\\pwsh.exe"
 
 return {
-	-- wsl_domains = wsl_domains,
-	-- default_domain = "WSL:Ubuntu-18.04",
 	default_prog = { pwsh },
-	-- default_prog = { "c:\\Windows\\System32\\wsl.exe" },
-	-- default_prog = { "ssh", "acc@192.168.50.2" },
 	default_gui_startup_args = { "connect", "wsl" },
+	-- Font
+	-- font = wezterm.font("Victor Mono", { weight = "Medium" }),
 	font = wezterm.font("JetBrains Mono", { weight = "Medium" }),
 	font_rules = {
 		{ intensity = "Bold", font = wezterm.font("JetBrains Mono", { weight = "ExtraBold" }) },
@@ -28,6 +26,7 @@ return {
 	freetype_load_target = "Light",
 	freetype_render_target = "HorizontalLcd",
 	line_height = 1.2,
+	-- Mix
 	hide_tab_bar_if_only_one_tab = true,
 	colors = {
 		background = "#202020",
@@ -36,7 +35,7 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 	window_background_image = "d:\\Luisy\\fotos\\ideafoto\\black_clover\\a4.png",
 	window_background_image_hsb = {
-		brightness = 0.06,
+		brightness = 0.16,
 		hue = 0.51,
 	},
 	text_background_opacity = 0.85,
@@ -64,8 +63,6 @@ return {
 			}),
 		},
 	},
-	-- window_decorations = "RESIZE",
-	-- allow_win32_input_mode = false
 	ssh_domains = {
 		{
 			name = "wsl",
@@ -81,4 +78,8 @@ return {
 			assume_shell = "Posix",
 		},
 	},
+	-- Makes FontAwesome's double-width glyphs display properly!
+	allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace",
+	-- !! this one opens a separate win on first unknown glyph, stealing windows focus !!
+	warn_about_missing_glyphs = false,
 }

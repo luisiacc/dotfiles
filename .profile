@@ -29,6 +29,6 @@ export DISPLAY=:0
 
 export PATH="${PATH}:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.local/bin"
 
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.poetry/bin:/usr/local/go/bin:$PATH"
 
 . "$HOME/.cargo/env"
