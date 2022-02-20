@@ -1,0 +1,15 @@
+#!/usr/bin/env python3.9
+import shutil
+
+windows_files = (
+    "/mnt/c/Users/acc/.wezterm.lua",
+    "/mnt/c/projects/wslssh.bat",
+    "/mnt/c/projects/wsl2_static_ip.bat",
+)
+
+windows_folder = "/home/acc/windows/"
+
+if __name__ == "__main__":
+    for file in windows_files:
+        name = file.split("/")[-1]
+        shutil.copyfile(file, windows_folder + name)
