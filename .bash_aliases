@@ -1,16 +1,12 @@
 # projects paths
-alias acucore='cd ~/projects/acubliss/core/'
 alias acuweb='cd ~/projects/acubliss/webui/'
-alias acuweb2='cd ~/projects/acubliss/client/'
 alias jumpf='cd /mnt/c/Users/acc/projects__/JumpForceStats/'
 alias p='git push -v'
 alias pf='git push --force -v'
 alias kitty='~/.local/kitty.app/bin/kitty'
 alias chrome="nohup google-chrome &"
+alias dpyc="find . -name \"*.pyc\" -exec rm -rf {} \;"
 
-# Celery
-alias runcelery="senv && poetry run celery -A common purge -f && poetry run celery -A common.celery worker -l info"
-alias runbeat="senv && poetry run celery -A common purge -f && poetry run celery -A common.celery beat -l info"
 
 alias sp='source ~/.profile'
 alias ..='cd ..'
@@ -18,6 +14,18 @@ alias k='kitty --detach'
 
 alias applyssh='eval $(ssh-agent -s);ssh-add ~/.ssh/key'
 alias mrunserver='poetry run python manage.py runserver 8000'
+
+alias acucore='cd ~/projects/acubliss/core/'
+alias acuweb2='cd ~/projects/acubliss/client/'
+
+# Celery
+alias runcelery="senv && poetry run celery -A common purge -f && poetry run celery -A common worker --loglevel=info --queues slow,celery"
+alias runbeat="senv && poetry run celery -A common purge -f && poetry run celery -A common.celery beat -l info"
+
+# REDIS
+alias senv="set -a; source .env; set +a"
+alias runredis="sudo service redis-server start"
+alias runpost="sudo service postgresql start"
 
 function runAcubliss(){
 	tmux new-session \; \
@@ -44,11 +52,6 @@ alias push="git push origin HEAD -v"
 alias pushf="git push origin HEAD --force -v"
 alias pullmaster="git pull origin master -v"
 
-
-# REDIS
-alias senv="set -a; source .env; set +a"
-alias runredis="sudo service redis-server start"
-alias runpost="sudo service postgresql start"
 
 # Poetry
 alias ps="set -a; source .env; set +a && poetry shell"

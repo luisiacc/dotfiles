@@ -2,7 +2,9 @@
 import shutil
 
 windows_files = (
-    "/mnt/c/Users/acc/.wezterm.lua",
+    "/mnt/c/Users/Luis/.config/wezterm/wezterm.lua",
+    "/mnt/c/Users/Luis/.config/wezterm/cfg_fonts.lua",
+    "/mnt/c/Users/Luis/.config/wezterm/my_utils.lua",
     "/mnt/c/projects/wslssh.bat",
     "/mnt/c/projects/wsl2_static_ip.bat",
 )

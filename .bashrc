@@ -146,3 +146,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 . "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'

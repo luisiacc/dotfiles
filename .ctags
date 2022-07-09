@@ -2,3 +2,4 @@
 --exclude=node_modules
 --exclude=.venv
 --exclude=.env
+--exclude=**/static/**
