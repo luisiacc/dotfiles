@@ -26,6 +26,7 @@ alias runbeat="senv && poetry run celery -A common purge -f && poetry run celery
 alias senv="set -a; source .env; set +a"
 alias runredis="sudo service redis-server start"
 alias runpost="sudo service postgresql start"
+alias postg="sudo -u postgres -i"
 
 function runAcubliss(){
 	tmux new-session \; \
